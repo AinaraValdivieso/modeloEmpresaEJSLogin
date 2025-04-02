@@ -1,0 +1,18 @@
+{
+    "reservas": [
+        {
+            "id_reserva": 1,
+            "fecha_reserva": "2025-02-20",
+            "hora_inicio": "10:00",
+            "hora_final": "12:00",
+            "estado": "Confirmada"
+        },
+        {
+            "id_reserva": 2,
+            "fecha_reserva": "2025-03-08",
+            "hora_inicio": "16:30",
+            "hora_final": "20:00",
+            "estado": "Cancelada"
+        }
+    ]
+}

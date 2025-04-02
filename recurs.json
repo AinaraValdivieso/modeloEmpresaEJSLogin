@@ -2,19 +2,19 @@
     "recursos": [
         {
             "id": 1,
-            "estado": "en uso",
+            "estado": "En uso",
             "tipo": "Sales",
             "ETipo": "Capacidad: 465"
         },
         {
             "id": 2,
-            "estado": "deshabilitado",
+            "estado": "Deshabilitado",
             "tipo": "Equipamiento",
-            "ETipo": "Especificaciones: "
+            "ETipo": "Especificaciones: muchas muchas"
         },
         {
             "id": 3,
-            "estado": "en uso",
+            "estado": "En uso",
             "tipo": "Sales",
             "ETipo": "Capacidad: 10000"
         }

@@ -1,10 +1,10 @@
 {
   "name": "modeloempresaejs",
   "version": "1.0.0",
-  "main": "recursos.js",
+  "main": "server.js",
   "type": "module",
   "scripts": {
-    "dev": "nodemon recursos.js"
+    "dev": "nodemon server.js"
   },
   "repository": {
     "type": "git",
