@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recursos</title>
+</head>
+<body>
+    <header>
+        <h1>¡Gestión de reursos por <%= user.name %>!</h1>
+        <h2><%- htmlMessage %></h2>
+    </header>
+    <main>
+        <section>
+            <h2>Llista de Productes</h2>
+            <ul class="product-list">
+                <% data.recursos.forEach(recurso => { %>
+                    <li class="product-item">
+                        <strong><%= recurso.estado %></strong> 
+                        <span>Categoria: <%= recurso.tipo %></span>
+                        <span>Preu: €<%= recurso.ETipo %></span>
+                    </li>
+                <% }) %>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>

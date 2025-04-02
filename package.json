@@ -1,0 +1,29 @@
+{
+  "name": "modeloempresaejs",
+  "version": "1.0.0",
+  "main": "recursos.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon recursos.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AinaraValdivieso/modeloEmpresaEJS.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AinaraValdivieso/modeloEmpresaEJS/issues"
+  },
+  "homepage": "https://github.com/AinaraValdivieso/modeloEmpresaEJS#readme",
+  "description": "",
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "ejs": "^3.1.10",
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
