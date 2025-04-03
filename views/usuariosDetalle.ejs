@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recursos</title>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+</head>
+<body>
+    <header>
+        <h1>¡Detalle de usuario <%=usuario.id%> por <%= user.name %>!</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Detalle usuario</h2>
+            <ul class="product-list">
+                <li class="product-item">
+                    <strong><%= usuario.correo %></strong> 
+                    <span><%= usuario.contrasenya %></span>
+                    <span><%= usuario.tipo %></span>
+                </li>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recursos</title>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+</head>
+<body>
+    <header>
+        <h1>¡Detalle de notificacion <%=notificacion.id_noti%> por <%= user.name %>!</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Detalle notificacion</h2>
+            <ul class="product-list">
+                <li class="product-item">
+                    <strong><%= notificacion.texto %></strong> 
+                </li>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>

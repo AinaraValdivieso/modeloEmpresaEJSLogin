@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReservaD</title>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+</head>
+<body>
+    <header>
+        <h1>¡Detalle de reseva <%=reserva.id%> por <%= user.name %>!</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Detalle reserva</h2>
+            <ul class="product-list">
+                <li class="product-item">
+                    <strong><%= reserva.estado %></strong> 
+                    <span><%= reserva.fecha_reserva %></span>
+                    <span><%= reserva.hora_inicio %></span>
+                    <span><%= reserva.hora_final %></span>
+                </li>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>
