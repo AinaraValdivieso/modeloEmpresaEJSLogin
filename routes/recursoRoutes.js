@@ -16,7 +16,7 @@ const readDataRec = () => {
 
 const writeRec=(data)=>{
     try{
-        fs.writeFileSync("",JSON.stringify(data));
+        fs.writeFileSync("./recurs.json",JSON.stringify(data));
 
     }catch(error){
         console.log(error);
@@ -41,7 +41,33 @@ router.get("/:id",(req,res)=>{
     res.render("recursoDetalle", {recurso, user});
 });
 
-/* //Crear recurso
+//MODIFICAR || PUT
+router.put("/editar/:id", (req, res) => {
+    const data = readDataRec();
+    const body = req.body;
+    const id = parseInt(req.params.id);
+    const recursIndex = data.recursos.findIndex((recurso) => recurso.id === id);
+    data.recursos[recursIndex] = {
+        ...data.recursos[recursIndex],
+        ...body,
+    };
+    writeRec(data);
+    res.json({ message: "Usuari modificat correctament" });
+});
+
+//Crear otro get para llevar a la página de editar/:id
+router.get("/editar/:id",(req,res)=>{
+    const data=readDataRec();
+    const user={name:"Ainara"};
+    const id=parseInt(req.params.id);
+    const recurso =data.recursos.find((recurso)=>recurso.id===id);
+    res.render("editarRecursos", {recurso, user});
+});
+
+export default router;
+
+/*
+//Crear recurso
 //Hacemos que la app cree un post (publicar)
 router.post("/recursos",(req,res)=>{
     const data=readData();
@@ -60,21 +86,9 @@ router.post("/recursos",(req,res)=>{
 
     res.json(nuevoRecurso);
 })
+*/
 
-//MODIFICAR || PUT
-router.put("/recursos/:id", (req, res) => {
-    const data = readData();
-    const body = req.body;
-    const id = parseInt(req.params.id);
-    const recursIndex = data.recursos.findIndex((recurso) => recurso.id === id);
-    data.recursos[recursIndex] = {
-        ...data.recursos[recursIndex],
-        ...body,
-    };
-    writeData(data);
-    res.json({ message: "Usuari modificat correctament" });
-});
-
+/*
 //PARA ELIMINAR || DELETE
 router.delete("/recursos/:id", (req, res) => {
     const data = readData();
@@ -84,6 +98,3 @@ router.delete("/recursos/:id", (req, res) => {
     writeData(data);
     res.json({ message: "Usuari eliminat correctament" });
 }); */
-
-
-export default router;
