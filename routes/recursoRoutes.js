@@ -7,7 +7,7 @@ const router = express.Router();
 
 const readDataRec = () => {
     try {
-        const data = fs.readFileSync("./recurs.json");
+        const data = fs.readFileSync("./bbdd/recurs.json");
         return JSON.parse(data);
     } catch (error) {
         console.error(error);
@@ -29,7 +29,7 @@ router.get('/', (req, res) => {
     <p>Aquest és un text <strong>amb estil</strong> i un enllaç:</p>
     <a href="https://www.example.com">Recursos Example</a>`;
     const data = readDataRec();
-    res.render("recurso",{user, data, htmlMessage})
+    res.render("recursos/recurso",{user, data, htmlMessage})
 });
 
 //Ver recurso por id GET
@@ -38,7 +38,7 @@ router.get("/:id",(req,res)=>{
     const user={name:"Ainara"};
     const id=parseInt(req.params.id);
     const recurso =data.recursos.find((recurso)=>recurso.id===id);
-    res.render("recursoDetalle", {recurso, user});
+    res.render("recursos/recursoDetalle", {recurso, user});
 });
 
 //MODIFICAR || PUT
@@ -52,7 +52,7 @@ router.put("/editar/:id", (req, res) => {
         ...body,
     };
     writeRec(data);
-    res.json({ message: "Usuari modificat correctament" });
+    res.json({ message: "Recurs modificat correctament" });
 });
 
 //Crear otro get para llevar a la página de editar/:id
@@ -61,7 +61,7 @@ router.get("/editar/:id",(req,res)=>{
     const user={name:"Ainara"};
     const id=parseInt(req.params.id);
     const recurso =data.recursos.find((recurso)=>recurso.id===id);
-    res.render("editarRecursos", {recurso, user});
+    res.render("recursos/editarRecursos", {recurso, user});
 });
 
 export default router;

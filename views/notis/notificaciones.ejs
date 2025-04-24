@@ -8,20 +8,18 @@
 </head>
 <body>
     <header>
-        <h1>¡Gestión de reservas por <%= user.name %>!</h1>
+        <h1>¡Gestión de notificaciones por <%= user.name %>!</h1>
         <h2><%- htmlMessage %></h2>
     </header>
     <main>
         <section>
-            <h2>Lista de Recursos</h2>
+            <h2>Lista de notificaciones</h2>
             <ul class="product-list">
-                <% data.reservas.forEach(reserva => { %>
+                <% data.notificacions.forEach(noti => { %>
                     <li class="product-item">
-                        <strong><%= reserva.estado %></strong> 
-                        <span><%= reserva.fecha_reserva %></span>
-                        <span><%= reserva.hora_inicio %></span>
-                        <span><%= reserva.hora_final %></span>
-                        <span><a href="/reservas/<%=reserva.id%>" class="botonDetalle">Detalle</a></span>
+                        <strong><%= noti.texto %></strong> 
+                        <span><a href="/notificaciones/<%=noti.id_noti%>" class="botonDetalle">Detalle</a></span>
+                        <span><a href="/notificaciones/editar/<%=noti.id_noti%>" class="botonDetalle">Editar notificación</a></span>
                     </li>
                 <% }) %>
             </ul>

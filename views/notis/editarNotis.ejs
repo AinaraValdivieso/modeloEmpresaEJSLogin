@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar</title>
+    <link rel="stylesheet" type="text/css" href="/style2.css">
+</head>
+<body>
+    <!--No tiene que funcionar-->
+    <h1>Aquí puedes editar la reseva <%=notificacion.id_noti%></h1>
+    <form action="/editar/:id" method="PUT">
+        <label>Texto:</label>
+        <input type="text" name="Texto" value="<%= notificacion.texto %>" required><br>
+        <button type="submit">Guardar cambios</button>
+        <a href="/recursos">Volver a la lista</a>
+    </form>
+    
+</body>
+</html>
