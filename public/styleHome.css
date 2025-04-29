@@ -4,13 +4,40 @@ body {
     padding: 0;
     background: radial-gradient(circle, #f3e8ff, #e4d1f4);
     color: #333;
-    display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     min-height: 100vh;
-    text-align: center;
 }
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #843bff;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .logout-form {
+    margin: 0;
+  }
+
+  .logout-form button {
+    padding: 5px 10px;
+    background-color: #fa1313;
+    color: white;
+    font-size: 25px;
+    border: none;
+    border-radius: 5px;
+  }
+  .logout-form :hover {
+    background-color: #ffffff;
+    color: #fa1313;
+  }
+
+  nav a {
+    margin-right: 15px;
+  }
 
 h1 {
     font-size: 2.5em;
